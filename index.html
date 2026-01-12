@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幸运抽奖系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">幸运抽奖</h1>
+        
+        <div class="lottery-grid" id="lotteryGrid">
+            <!-- 方块将通过 JavaScript 动态生成 -->
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn" class="start-btn">吃吃吃</button>
+        </div>
+    </div>
+    
+    <!-- 弹框 -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-emoji" id="modalEmoji">🎉</div>
+            <div class="modal-title">公主请用餐！</div>
+            <div class="modal-prize" id="modalPrize">麻婆豆腐</div>
+            <div class="modal-buttons">
+                <button id="confirmBtn" class="confirm-btn">确定</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
