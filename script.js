@@ -55,9 +55,33 @@ let config = {
             "name": "🥢",
             "description": "鱼香肉丝",
             "color": "#FF9800"
+        },
+        {
+            "id": 10,
+            "name": "🦆",
+            "description": "北京烤鸭",
+            "color": "#8B4513"
+        },
+        {
+            "id": 11,
+            "name": "🥛",
+            "description": "奶茶小面包",
+            "color": "#E8B4B8"
+        },
+        {
+            "id": 12,
+            "name": "🥟",
+            "description": "小笼包炒米线",
+            "color": "#FFA07A"
+        },
+        {
+            "id": 13,
+            "name": "🥣",
+            "description": "馄炖",
+            "color": "#FFE4B5"
         }
     ],
-    "gridSize": 9,
+    "gridSize": 13,
     "animationSpeed": 100
 };
 
