@@ -71,13 +71,13 @@ let config = {
         {
             "id": 12,
             "name": "🥟",
-            "description": "小笼包炒米线",
+            "description": "炒米粉",
             "color": "#FFA07A"
         },
         {
             "id": 13,
             "name": "🥣",
-            "description": "馄炖",
+            "description": "混沌小笼包",
             "color": "#FFE4B5"
         }
     ],
