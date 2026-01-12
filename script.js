@@ -70,7 +70,7 @@ let config = {
         },
         {
             "id": 12,
-            "name": "🥟",
+            "name": "🍜",
             "description": "炒米粉",
             "color": "#FFA07A"
         },
