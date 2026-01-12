@@ -132,15 +132,23 @@ function generateLotteryGrid() {
     const grid = document.getElementById('lotteryGrid');
     grid.innerHTML = '';
     
-    // 根据配置的 gridSize 生成方块
-    const gridSize = config.gridSize || 9;
-    const cols = Math.ceil(Math.sqrt(gridSize));
-    grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    const gridSize = config.prizes.length;
+    const radius = 200; // 圆的半径
+    const centerX = 250; // 中心X坐标
+    const centerY = 250; // 中心Y坐标
     
-    for (let i = 0; i < gridSize && i < config.prizes.length; i++) {
+    for (let i = 0; i < gridSize; i++) {
         const box = document.createElement('div');
         box.className = 'lottery-box';
         box.dataset.index = i;
+        
+        // 计算圆形位置
+        const angle = (i / gridSize) * 2 * Math.PI - Math.PI / 2;
+        const x = centerX + radius * Math.cos(angle) - 50; // 50是box宽度的一半
+        const y = centerY + radius * Math.sin(angle) - 50; // 50是box高度的一半
+        
+        box.style.left = x + 'px';
+        box.style.top = y + 'px';
         
         // 按顺序显示每个菜品
         const prize = config.prizes[i];
