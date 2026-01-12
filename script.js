@@ -133,9 +133,13 @@ function generateLotteryGrid() {
     grid.innerHTML = '';
     
     const gridSize = config.prizes.length;
-    const radius = 200; // 圆的半径
-    const centerX = 250; // 中心X坐标
-    const centerY = 250; // 中心Y坐标
+    
+    // 根据屏幕大小调整半径
+    const isMobile = window.innerWidth <= 600;
+    const radius = isMobile ? 110 : 200; // 移动端用更小的半径
+    const centerX = isMobile ? 140 : 250;
+    const centerY = isMobile ? 140 : 250;
+    const boxSize = isMobile ? 60 : 100;
     
     for (let i = 0; i < gridSize; i++) {
         const box = document.createElement('div');
@@ -144,8 +148,8 @@ function generateLotteryGrid() {
         
         // 计算圆形位置
         const angle = (i / gridSize) * 2 * Math.PI - Math.PI / 2;
-        const x = centerX + radius * Math.cos(angle) - 50; // 50是box宽度的一半
-        const y = centerY + radius * Math.sin(angle) - 50; // 50是box高度的一半
+        const x = centerX + radius * Math.cos(angle) - boxSize / 2;
+        const y = centerY + radius * Math.sin(angle) - boxSize / 2;
         
         box.style.left = x + 'px';
         box.style.top = y + 'px';

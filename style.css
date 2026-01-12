@@ -273,33 +273,47 @@ button {
 
 @media (max-width: 600px) {
     .container {
-        padding: 20px;
+        padding: 10px;
     }
     
     h1 {
-        font-size: 1.8em;
+        font-size: 1.5em;
+        margin-bottom: 20px;
     }
     
     .lottery-grid {
-        width: 350px;
-        height: 350px;
+        width: 280px;
+        height: 280px;
     }
     
     .lottery-box {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
     
     .box-name {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     
     .box-desc {
-        font-size: 0.6em;
+        font-size: 0.5em;
     }
     
     button {
         padding: 12px 30px;
         font-size: 1em;
+    }
+    
+    .modal-content {
+        padding: 30px 40px;
+        width: 85%;
+    }
+    
+    .modal-emoji {
+        font-size: 4em;
+    }
+    
+    .modal-prize {
+        font-size: 1.8em;
     }
 }
